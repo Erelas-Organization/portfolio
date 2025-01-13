@@ -1,0 +1,62 @@
+<section class="min-h-screen bg-[#c07bc0]">
+  <div class="polaroid-outer pt-5">
+    <div class="polaroid-inner justify-self-center">
+      <img src="/profile-pic.jpg" alt="Profile Picture" />
+    </div>
+    <p
+      class="justify-self-center retro-font mt-6 border-b-4 border-dashed border-black"
+    >
+      Emmanuela Zhupa
+    </p>
+  </div>
+  <div class="flex social-buttons ">
+    <a href="#" class="social-btn mr-5" target="_blank"> </a>
+    <a href="#" class="social-btn mr-5" target="_blank"> </a>
+    <a href="#" class="social-btn" target="_blank"> </a>
+  </div>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .polaroid-outer {
+      background-color: rgb(255, 255, 255);
+      width: 350px;
+      height: 420px;
+    }
+
+    .polaroid-inner {
+      width: 300px;
+      height: 300px;
+    }
+
+    .retro-font {
+      font-family: "Press Start 2P", serif;
+    }
+
+    .social-btn {
+      width: 100px;
+      height: 100px;
+      background-color: #f54bae;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+      );
+    }
+  </style>
+</section>
