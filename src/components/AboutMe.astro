@@ -2,22 +2,21 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="min-h-screen bg-[#c07bc0] content-center">
-  <div class="win95-block justify-self-center">
-    <div class="win95-title">
-        <button class="win95-button ml-auto retro-font">x</button>
+<section class="min-h-screen bg-[#c07bc0] pt-16">
+  <div class="title retro-font justify-self-center text-5xl text-[#ff9ef0]">ABOUT ME</div>
+  <div class="win95-block w-[90%] max-w-[1200px] pb-4">
+    <div class="win95-title flex items-center content-between min-h-6">
+      <button class="win95-button ml-auto retro-font min-w-6 min-h-5 cursor-pointer inline-flex items-center content-center">x</button>
     </div>
-    <div class="retro-content flex items-center">
-      <div class="polaroid-outer pt-5 mr-7 ml-3 mt-3 justify-self-center">
-        <div class="polaroid-inner justify-self-center">
-          <img src="/profile-pic.jpg" alt="Profile Picture" />
+    <div class="flex items-center justify-center flex-wrap gap-5">
+      <div class="polaroid-outer pt-5 mr-7 ml-3 mt-3 pb-4 justify-self-center w-[100%] max-w-[350px]">
+        <div class="polaroid-inner justify-self-center w-[90%] overflow-hidden">
+          <img src="/profile-pic.jpg" alt="Profile Picture" class="w-[100%] h-auto block" />
         </div>
-        <p
-          class="justify-self-center retro-font mt-6 border-b-4 border-dashed border-black"
-        >
+        <p class="justify-self-center retro-font mt-6 border-b-4 border-dashed border-black">
           Emmanuela Zhupa
         </p>
-        <div class="flex social-buttons mt-6 mx-2 justify-center">
+        <div class="flex mt-6 mx-2 justify-center">
           <a
             href="https://github.com/erelaa"
             class="social-btn mr-5"
@@ -60,12 +59,17 @@ import { Icon } from "astro-icon/components";
           </a>
         </div>
       </div>
-      <div class="aboutme-description retro-font">
-      </br>Hi, I'm Emma!</br></br> I recently graduated with a Bachelor's in Business
-        Informatics and will be starting my Master's this April.</br></br> A bit about
-        my journey: Growing up, I loved watching my dad work on his computer. You could say I was very familiar with computers since I was little.</br></br>Fast forward to today, and I’ve got a toolkit filled
-        with experiences from university projects, personal side hustles, and
-        working student jobs.</br>These experiences have honed my skills in both tech and business, allowing me to tackle a wide range of challenges.</br></br> 
+
+      <div class="aboutme-description retro-font flex-1 min-w-[500px] max-w-[700px]">
+        </br>Hi, I'm Emma!</br></br>
+        I recently graduated with a Bachelor's in Business Informatics
+        and will be starting my Master's this April.</br></br>
+        A bit about my journey: Growing up, I loved watching my dad work on his computer. 
+        You could say I was very familiar with computers since I was little.</br></br>
+        Fast forward to today, and I’ve got a toolkit filled with experiences from 
+        university projects, personal side hustles, and working student jobs.</br>
+        These experiences have honed my skills in both tech and business, allowing 
+        me to tackle a wide range of challenges.</br></br>
         Feel free to explore more about my skills and projects and let’s connect!
       </div>
     </div>
@@ -73,20 +77,15 @@ import { Icon } from "astro-icon/components";
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-    #background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
     .retro-font {
       font-family: "Press Start 2P", serif;
     }
+
+    .title{
+      text-shadow: 0.08em 0.08em #111fe4;
+    }
+
     .win95-block {
-      width: 1200px;
-      height: 600px;
       background: #c0c0c0;
       border: 2px solid;
       border-bottom-color: #404040;
@@ -94,17 +93,14 @@ import { Icon } from "astro-icon/components";
       border-left-color: #fff;
       border-top-color: #fff;
       box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-      margin: 16px;
+      margin: 16px auto;
     }
 
     .win95-title {
       background: linear-gradient(90deg, #55085f, #c07baf);
       padding: 3px 2px 3px 3px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 24px;
     }
+
     .win95-button {
       background: #c0c0c0;
       border: 2px solid;
@@ -113,24 +109,17 @@ import { Icon } from "astro-icon/components";
       border-bottom-color: #404040;
       border-right-color: #404040;
       padding: 2px 6px;
-      min-width: 24px;
-      min-height: 20px;
       font-size: clamp(10px, 2.5vw, 12px);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .polaroid-outer {
-      background-color: rgb(255, 255, 255);
-      width: 350px;
-      height: 490px;
+      background-color: #fff;
+      margin: 0 auto;
     }
 
     .polaroid-inner {
-      width: 300px;
-      height: 300px;
+      max-height: 300px;
+      margin: 0 auto;
     }
 
     .social-btn {
@@ -149,12 +138,11 @@ import { Icon } from "astro-icon/components";
         0% 70%,
         0% 30%
       );
-      :hover {
-        color: rgb(245, 229, 241);
-      }
     }
 
-    .aboutme-description {
+    .social-btn:hover {
+      color: rgb(245, 229, 241);
     }
+
   </style>
 </section>

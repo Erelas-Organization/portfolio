@@ -1,0 +1,97 @@
+---
+
+---
+
+<section class="min-h-screen bg-[#705670] grid place-items-center px-4 py-8">
+  <div class="title retro-font text-5xl text-[#ff9ef0] pt-16">SKILLS & TOOLS</div>
+  <div class="flex flex-col items-center mt-8">
+    <section
+      class="relative bg-[#09161D] shadow-[0_5px_35px_rgb(9,22,29)] h-[600px] w-[750px]
+                     grid grid-cols-4 gap-4 p-4 md:p-[4rem] rounded-[15px]"
+    >
+      <div class="retro-font text-2xl text-[#ff9ef0] col-span-4 text-center">
+        My Deck
+      </div>
+      <button class="custom-button retro-font active text-[0.6rem]">JS/TS</button>
+      <button class="custom-button retro-font text-[0.6rem]">HTML</button>
+      <button class="custom-button retro-font text-[0.6rem]">CSS/SCSS</button>
+      <button class="custom-button retro-font text-[0.6rem]">C</button>
+      <button class="custom-button retro-font text-[0.6rem]">C#</button>
+      <button class="custom-button retro-font text-[0.6rem]">React</button>
+      <button class="custom-button retro-font text-[0.6rem]">Java</button>
+      <button class="custom-button retro-font text-[0.6rem]">Tailwind CSS</button>
+      <button class="custom-button retro-font text-[0.6rem]">Vue.js</button>
+      <button class="custom-button retro-font text-[0.6rem]">Blazor</button>
+      <button class="custom-button retro-font text-[0.6rem]">PHP</button>
+      <button class="custom-button retro-font text-[0.6rem]">Python</button>
+      <button class="custom-button retro-font text-[0.6rem]">Django</button>
+      <button class="custom-button retro-font text-[0.6rem]">Docker</button>
+      <button class="custom-button retro-font text-[0.6rem]">GitHub</button>
+      <button class="custom-button retro-font text-[0.6rem]">Azure</button>
+      <button class="custom-button retro-font text-[0.6rem]">Typo3</button>
+      <button class="custom-button retro-font text-[0.6rem]">Wordpress</button>
+      <button class="custom-button retro-font text-[0.6rem]">SQL</button>
+      <button class="custom-button retro-font text-[0.6rem]">Bootstrap</button>
+      <button class="custom-button retro-font text-[0.6rem]">Laravel</button>
+      <button class="custom-button retro-font text-[0.6rem]">Next.js</button>
+      <button class="custom-button retro-font text-[0.6rem]">Postman</button>
+      <button class="custom-button retro-font text-[0.6rem]">Figma</button>
+      <div class="streamdeck-logo"></div>
+    </section>
+  </div>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+    .retro-font {
+      font-family: "Press Start 2P", serif;
+
+    }
+    .title{
+        text-shadow: 0.08em 0.08em #111fe4;
+    }
+
+    .custom-button {
+      @apply cursor-pointer
+                 bg-[#955597] rounded-[15px] border-none 
+                 transition-all duration-200 
+                 px-2 py-1 
+                 shadow-[1px_1px_0px_#424,1px_2px_0px_#424,1px_3px_0px_#424,1px_4px_0px_#424,1px_5px_0px_#424,1px_6px_0px_#424,1px_7px_0px_#424];
+    }
+
+    .custom-button.active {
+      @apply bg-[#e2aee2] shadow-none relative top-[2.5px];
+    }
+    .streamdeck-logo {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 24%;
+      top: 8px;
+      width: 393px;
+      height: 82px;
+      transform: scale(0.8);
+      pointer-events: none;
+    }
+  </style>
+
+  <script is:inline>
+    const buttons = Array.from(
+      document.querySelectorAll("button.custom-button")
+    );
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        buttons.forEach((btn) => {
+          if (
+            btn.innerText === e.target.innerText &&
+            !btn.classList.contains("active")
+          ) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+      });
+    });
+  </script>
+</section>

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Skills from "../components/Skills.astro";
 import background from "../assets/background.png";
 
 ---
@@ -10,6 +11,7 @@ import background from "../assets/background.png";
   <img id="background" src={background.src} alt="" fetchpriority="high" />
   <Welcome />
   <AboutMe />
+  <Skills />
 </Layout>
 
 <style>
