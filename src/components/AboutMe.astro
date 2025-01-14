@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <section class="min-h-screen bg-[#c07bc0]">
   <div class="polaroid-outer pt-5">
     <div class="polaroid-inner justify-self-center">
@@ -9,10 +13,23 @@
       Emmanuela Zhupa
     </p>
   </div>
-  <div class="flex social-buttons ">
-    <a href="#" class="social-btn mr-5" target="_blank"> </a>
-    <a href="#" class="social-btn mr-5" target="_blank"> </a>
-    <a href="#" class="social-btn" target="_blank"> </a>
+  <div class="flex social-buttons">
+    <a href="https://github.com/erelaa" class="social-btn mr-5" target="_blank">
+      <Icon name="github" size={100} />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/emmanuela-zhupa-3ab688210/"
+      class="social-btn mr-5"
+      target="_blank"
+    >
+      <Icon name="linkedin" size={100} />
+    </a>
+    <a href="mailto:em.zhupa@gmail.com" class="social-btn mr-5" target="_blank">
+      <Icon name="mail" size={100} />
+    </a>
+    <a href="tel:+4915788644558" class="social-btn" target="_blank">
+      <Icon name="phone" size={100} />
+    </a>
   </div>
 
   <style>
@@ -44,7 +61,6 @@
       width: 100px;
       height: 100px;
       background-color: #f54bae;
-      display: flex;
       align-items: center;
       justify-content: center;
       clip-path: polygon(
