@@ -4,14 +4,17 @@ import Welcome from "../components/Welcome.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Skills from "../components/Skills.astro";
 import background from "../assets/background.png";
-
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout>
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
-  <Welcome />
-  <AboutMe />
-  <Skills />
+  <div class="h-screen snap-y snap-mandatory overflow-y-scroll">
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <Welcome />
+    <AboutMe />
+    <Skills />
+    <Projects />
+  </div>
 </Layout>
 
 <style>

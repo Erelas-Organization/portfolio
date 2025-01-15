@@ -1,48 +1,44 @@
----
-
----
-
-<section class="min-h-screen bg-[#705670] grid place-items-center px-4 py-8">
-  <div class="title retro-font text-5xl text-[#ff9ef0] pt-16">
+<section class="min-h-screen snap-start">
+  <div class="title retro-font text-5xl text-[#ff9ef0] pt-16 text-center">
     SKILLS & TOOLS
   </div>
-  <div class="flex flex-col items-center mt-8">
+
+  <div class="mt-8 grid place-items-center">
     <section
-      class="relative bg-[#09161D] shadow-[0_5px_35px_rgb(9,22,29)] h-[600px] w-[750px]
-                     grid grid-cols-4 gap-4 p-4 md:p-[4rem] rounded-[15px]"
+      class="relative bg-[#09161D] shadow-[0_5px_35px_rgb(9,22,29)]
+        w-full max-w-[1000px] min-h-[500px]
+        grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6
+        gap-4 p-4 md:p-8
+        rounded-[15px]
+        justify-items-center"
     >
-      <div class="retro-font text-2xl text-[#ff9ef0] col-span-4 text-center">
+      <div class="retro-font text-2xl text-[#ff9ef0] col-span-full text-center">
         My Deck
       </div>
-      <button class="custom-button retro-font active"
-        >JS/TS</button
-      >
+      <button class="custom-button retro-font active">JS/TS</button>
       <button class="custom-button retro-font">CSS/SCSS</button>
       <button class="custom-button retro-font">HTML</button>
+      <button class="custom-button retro-font">PHP</button>
+      <button class="custom-button retro-font">Java</button>
       <button class="custom-button retro-font">C</button>
       <button class="custom-button retro-font">C#</button>
+      <button class="custom-button retro-font">Python</button>
+      <button class="custom-button retro-font">SQL</button>
+      <button class="custom-button retro-font">Tailwind CSS</button>
       <button class="custom-button retro-font">React</button>
-      <button class="custom-button retro-font">Java</button>
-      <button class="custom-button retro-font"
-        >Tailwind CSS</button
-      >
       <button class="custom-button retro-font">Vue.js</button>
       <button class="custom-button retro-font">Blazor</button>
-      <button class="custom-button retro-font">PHP</button>
-      <button class="custom-button retro-font">Python</button>
       <button class="custom-button retro-font">Django</button>
-      <button class="custom-button retro-font">Docker</button>
-      <button class="custom-button retro-font">GitHub</button>
-      <button class="custom-button retro-font">Azure</button>
-      <button class="custom-button retro-font">Typo3</button>
-      <button class="custom-button retro-font">Wordpress</button>
-      <button class="custom-button retro-font">SQL</button>
       <button class="custom-button retro-font">Bootstrap</button>
       <button class="custom-button retro-font">Laravel</button>
       <button class="custom-button retro-font">Next.js</button>
+      <button class="custom-button retro-font">Docker</button>
+      <button class="custom-button retro-font">GitHub</button>
       <button class="custom-button retro-font">Postman</button>
       <button class="custom-button retro-font">Figma</button>
-      <div class="streamdeck-logo"></div>
+      <button class="custom-button retro-font">Azure</button>
+      <button class="custom-button retro-font">Typo3</button>
+      <button class="custom-button retro-font">Wordpress</button>
     </section>
   </div>
 
@@ -52,32 +48,29 @@
     .retro-font {
       font-family: "Press Start 2P", serif;
     }
+
     .title {
       text-shadow: 0.08em 0.08em #111fe4;
     }
 
     .custom-button {
-      @apply cursor-pointer
-                 bg-[#955597] rounded-[15px] border-none 
-                 transition-all duration-200 
-                 px-2 py-1 
-                 shadow-[1px_1px_0px_#424,1px_2px_0px_#424,1px_3px_0px_#424,1px_4px_0px_#424,1px_5px_0px_#424,1px_6px_0px_#424,1px_7px_0px_#424];
-                 font-size: 0.6rem
+      @apply cursor-pointer bg-[#955597] rounded-[15px] border-none 
+             transition-all duration-200 
+             w-20 h-20 
+             md:w-24 md:h-24 
+             lg:w-28 lg:h-28
+             shadow-[1px_1px_0px_#424,1px_2px_0px_#424,1px_3px_0px_#424,1px_4px_0px_#424,1px_5px_0px_#424,1px_6px_0px_#424,1px_7px_0px_#424];
+      font-size: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .custom-button {
+        font-size: 0.6rem;
+      }
     }
 
     .custom-button.active {
       @apply bg-[#e2aee2] shadow-none relative top-[2.5px];
-    }
-    .streamdeck-logo {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 24%;
-      top: 8px;
-      width: 393px;
-      height: 82px;
-      transform: scale(0.8);
-      pointer-events: none;
     }
   </style>
 
