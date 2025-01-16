@@ -1,21 +1,22 @@
-
-    <section class="min-h-screen content-center snap-start">
-      <div class="flex flex-col justify-items-center">
-		<div class="justify-items-center">
-			<h1 class="title-retro title-retro-shadow text-5xl md:text-9xl">
-				PORTFOLIO
-			</h1>
-		  </div>
-		  <div class="justify-items-center">
-			<h2 class="blink title-retro subtitle-retro text-xl md:text-2xl mt-11">
-			  SCROLL DOWN TO START!
-			</h2>
-			<h2 class="moveupdown title-retro subtitle-retro text-2xl md:text-4xl mt-7">
-			  v
-			</h2>
-		  </div>
-	  </div>
-    </section>
+<section class="min-h-screen content-center snap-start">
+  <div class="flex flex-col justify-items-center">
+    <div class="justify-items-center">
+      <h1 class="title-retro title-retro-shadow text-5xl md:text-9xl">
+        PORTFOLIO
+      </h1>
+    </div>
+    <div class="justify-items-center">
+      <h2 class="blink subtitle-retro text-xl md:text-2xl mt-11">
+        SCROLL DOWN TO START!
+      </h2>
+      <h2
+        class="moveupdown subtitle-retro text-2xl md:text-4xl mt-7"
+      >
+        v
+      </h2>
+    </div>
+  </div>
+</section>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
@@ -29,10 +30,40 @@
     text-shadow: 0.08em 0.08em #111fe4;
   }
 
+  @media (max-width: 1170px) {
+    .title-retro {
+      font-size: 6rem;
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: 875px) {
+    .title-retro {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .title-retro {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+  }
+
   .subtitle-retro {
+    font-family: "Press Start 2P", serif;
+    color: #ff9ef0;
     background: linear-gradient(to top, #ff9ef0 0 35%, #ffffff);
     background-clip: text;
     color: transparent;
+  }
+
+  @media (max-width: 420px) {
+    .subtitle-retro {
+      font-size: 1rem;
+      line-height: 1;
+    }
   }
 
   .blink {

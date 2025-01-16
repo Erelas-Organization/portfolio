@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section class="min-h-screen snap-start">
-  <div class="title retro-font justify-self-center text-5xl text-[#ff9ef0] pt-16">ABOUT ME</div>
+  <div class="title retro-font justify-self-center text-center text-5xl text-[#ff9ef0] pt-16">ABOUT ME</div>
   <div class="win95-block w-[90%] max-w-[1200px] pb-4">
     <div class="win95-title flex items-center content-between min-h-6">
       <button class="win95-button ml-auto retro-font min-w-6 min-h-5 cursor-pointer inline-flex items-center content-center">x</button>
@@ -60,7 +60,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
 
-      <div class="aboutme-description retro-font flex-1 min-w-[500px] max-w-[700px]">
+      <div class="aboutme-description retro-font flex-1 md:min-w-[500px] max-w-[700px] min-w-fit text-xs md:text-base">
         </br>Hi, I'm Emma!</br></br>
         I recently graduated with a Bachelor's in Business Informatics
         and will be starting my Master's this April.</br></br>
@@ -143,6 +143,5 @@ import { Icon } from "astro-icon/components";
     .social-btn:hover {
       color: rgb(245, 229, 241);
     }
-
   </style>
 </section>
