@@ -1,0 +1,124 @@
+---
+const channels = [
+  { src: "/Bot.gif", type: "image" },
+  { src: "/Rezept.png", type: "image" },
+  { src: "/tookiorg.gif", type: "image" }
+];
+---
+
+<div class="relative mx-auto box-border tv-width">
+  <div class="absolute left-1/2 w-1/2 h-[17.5%] -translate-x-1/2 top-0">
+    <div class="antenna left"></div>
+    <div class="antenna right"></div>
+    <div class="antenna-base"></div>
+  </div>
+  <div class="absolute top-[17.5%] inset-x-0 h-[73.2%] bg-[#955597] border-[3px] border-[#3b3733] rounded-[4.5%] p-[3%] box-border z-10 tv-center">
+    <div class="float-left w-full h-[92%] overflow-hidden screen">
+      <div id="channel-display" class="w-full h-full">
+        <img src={channels[0].src} alt="TV Channel" class="w-full h-full rounded-[4.5%]">
+      </div>
+    </div>
+    <div class="float-right channels-wrapper">
+      <ul class="channel-list flex">
+        <button class="channel-btn prev-channel bg-[#3b3733] w-12 h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg mt-1 mr-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button class="channel-btn next-channel bg-[#3b3733] w-12 h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </ul>
+    </div>
+  </div>
+  <div class="absolute top-[87.7%] left-[20%] w-[60%] h-[16.3%] z-0 tv-base">
+    <div class="foot left"></div>
+    <div class="foot right"></div>
+  </div>
+</div>
+
+<script>
+  const channels = [
+    { src: "/Bot.gif", type: "image" },
+    { src: "/Rezept.png", type: "image" },
+    { src: "/tookiorg.gif", type: "image" }
+  ];
+  
+  let currentChannel = 0;
+  const channelDisplay = document.getElementById('channel-display');
+  
+  function updateChannel() {
+    const channel = channels[currentChannel];
+    channelDisplay.innerHTML = `<img src="${channel.src}" alt="TV Channel" class="w-full h-full object-contain bg-black">`;
+  }
+  
+  document.querySelector('.prev-channel').addEventListener('click', () => {
+    currentChannel = (currentChannel - 1 + channels.length) % channels.length;
+    updateChannel();
+  });
+  
+  document.querySelector('.next-channel').addEventListener('click', () => {
+    currentChannel = (currentChannel + 1) % channels.length;
+    updateChannel();
+  });
+</script>
+
+<style>
+.tv-width {
+  aspect-ratio: 70/57;
+  width: min(90vw, 800px);
+}
+
+.tv-center {
+  box-shadow: -3% -3% #e2aee2;
+}
+
+.antenna {
+  position: absolute;
+  width: 2.7%;
+  height: 100%;
+  background-color: #3b3733;
+  transform-origin: bottom center;
+}
+
+.antenna.left { 
+  left: 50px;
+  transform: rotate(-30deg);
+}
+
+.antenna.right {
+  right: 50px;
+  transform: rotate(30deg);
+}
+
+.antenna-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22.5%;
+  background-color: #3b3733;
+  border-radius: 48px 48px 0 0;
+}
+
+.foot {
+  float: left;
+  width: 4.9%;
+  height: 115%;
+  margin-top: -10%;
+  background-color: #3b3733;
+  border-radius: 48px;
+  position: relative;
+}
+
+.foot.left {
+  transform: rotate(30deg);
+}
+
+.foot.right {
+  float: right;
+  transform: rotate(-30deg);
+}
+</style>

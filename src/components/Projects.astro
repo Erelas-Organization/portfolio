@@ -1,295 +1,32 @@
-<section class="min-h-screen bg-[#705670] py-16 tv-wrapper snap-start">
-  <div class="title retro-font text-5xl text-[#ff9ef0] mb-8 text-center">
+---
+import Television from "./Television.astro";
+---
+
+<section class="projects snap-start -z-10">
+  <div class="title">
     MY PROJECTS
   </div>
-  <div class="television">
-    <div class="television__top">
-      <div class="television__antenna television__antenna--left"></div>
-      <div class="television__antenna television__antenna--right"></div>
-      <div class="television__antenna__base"></div>
-    </div>
-    <div class="television__center">
-      <div class="television__screen">
-        <iframe src="https://www.youtube.com/embed/SRu6YRr1KtM" allowfullscreen
-        ></iframe>
-      </div>
-      <div class="television__channels-wrapper content-center">
-        <ul class="television__channels">
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/SRu6YRr1KtM"
-              title="Channel 1"></a>
-          </li>
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/oRdxUFDoQe0"
-              title="Channel 2"></a>
-          </li>
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/EGikhmjTSZI"
-              title="Channel 3"></a>
-          </li>
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/06qJVpUSKZY"
-              title="Channel 4"></a>
-          </li>
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/v_09wFxoaeQ"
-              title="Channel 5"></a>
-          </li>
-          <li class="television__channel">
-            <a
-              href="https://www.youtube.com/embed/Tj75Arhq5ho"
-              title="Channel 6"></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="television__base">
-      <div class="television__foot television__foot--left"></div>
-      <div class="television__foot television__foot--right"></div>
-    </div>
-  </div>
+  <Television />
 </section>
-<style lang="css">
-  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-  .tv-wrapper .retro-font {
-    font-family: "Press Start 2P", serif;
-  }
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-  .tv-wrapper .title {
-    text-shadow: 0.08em 0.08em #111fe4;
-  }
+.projects {
+  min-height: 100vh;
+  background: #705670;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .tv-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tv-wrapper iframe {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border: 10px solid;
-    border-radius: 32px;
-  }
-
-  .tv-wrapper .television {
-    width: 600px;
-    margin: 0 auto;
-  }
-
-  .tv-wrapper .television__top {
-    width: 50%;
-    margin: auto;
-    position: relative;
-  }
-
-  .tv-wrapper .television__antenna {
-    width: 5px;
-    height: 100px;
-    background-color: #3b3733;
-    margin-bottom: -10px;
-  }
-
-  .tv-wrapper .television__antenna--left {
-    transform: rotate(-30deg);
-    float: left;
-  }
-
-  .tv-wrapper .television__antenna--right {
-    transform: rotate(30deg);
-    float: right;
-  }
-
-  .tv-wrapper .television__antenna__base {
-    height: 20px;
-    background-color: #3b3733;
-    border-top-left-radius: 48px;
-    border-top-right-radius: 48px;
-    margin-bottom: 10px;
-    clear: both;
-    position: relative;
-    z-index: 2;
-  }
-
-  .tv-wrapper .television__center {
-    position: relative;
-    z-index: 2;
-    width: 700px;
-    height: 400px;
-    background-color: #955597;
-    border: solid 3px #111fe4;
-    box-shadow: -10px -10px #e2aee2;
-    border-radius: 48px;
-    margin: 0 auto;
-    padding: 10px 15px;
-  }
-
-  .tv-wrapper .television__screen {
-    width: 550px;
-    height: 375px;
-    background-color: #eed5b6;
-    border-radius: 48px;
-    float: left;
-  }
-
-  .tv-wrapper .television__channels-wrapper {
-    width: 80px;
-    height: 190px;
-    background-color: #3b3733;
-    border-radius: 48px;
-    float: right;
-  }
-
-  .tv-wrapper .television__channels {
-    padding: 0;
-    margin: 0;
-  }
-
-  .tv-wrapper .television__channel {
-    list-style-type: none;
-    background-color: #e2aee2;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 5px;
-    float: left;
-    position: relative;
-  }
-
-  .tv-wrapper .television__channel a {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #955597;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-
-  .tv-wrapper .television__channel a:active {
-    box-shadow:
-      inset rgba(255, 255, 255, 0.6) 0 2px 2px,
-      inset rgba(0, 0, 0, 0.15) 0 -2px 5px,
-      rgba(100, 100, 100, 0.6) 0 2px 1px,
-      rgba(100, 100, 100, 0.6) 0 2px 1px;
-  }
-
-  .tv-wrapper .television__base {
-    width: 60%;
-    margin: auto;
-  }
-
-  .tv-wrapper .television__base:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-
-  .tv-wrapper .television__foot {
-    width: 20px;
-    height: 70px;
-    margin-top: -20px;
-    background-color: #3b3733;
-    border-radius: 48px;
-  }
-
-  .tv-wrapper .television__foot--left {
-    transform: rotate(30deg);
-    float: left;
-  }
-
-  .tv-wrapper .television__foot--right {
-    transform: rotate(-30deg);
-    float: right;
-  }
-
-  .tv-wrapper .p {
-    margin-top: 70px;
-  }
-
-  @media (max-width: 820px) {
-    .tv-wrapper .television__screen  {
-      width: 430px;
-      height: 315px;
-    }
-    .tv-wrapper .television__center {
-      width: 570px;
-      height: 340px;
-    }
-  }
-
-  @media (max-width: 595px) {
-    .tv-wrapper .television__screen  {
-      width: 430px;
-      height: 315px;
-    }
-    .tv-wrapper .television__center {
-      width: 570px;
-      height: 340px;
-    }
-  }
-
-  @media (min-width: 525px) and (max-width: 595px) {
-    .tv-wrapper .television__screen  {
-      width: 400px;
-      height: 280px;
-    }
-    .tv-wrapper .television__center {
-      width: 500px;
-      height: 300px;
-    }
-    .tv-wrapper .television {
-      width: 545px;
-    }
-
-    .tv-wrapper .television__channels-wrapper {
-      width: 42px;
-      height: 270px;
-    }
-  }
-
-  @media (max-width: 525px) {
-    .tv-wrapper .television__screen  {
-      width: 221px;
-      height: 207px;
-    }
-    .tv-wrapper .television__center {
-      width: 330px;
-      height: 235px;
-    }
-    .tv-wrapper .television__channels-wrapper {
-      width: 62px;
-      height: 205px;
-    }
-    .tv-wrapper .television__channel{
-      width: 20px;
-      height: 20px;
-    }
-    .tv-wrapper .television {
-      width: 390px;
-    }
-
-  }
+.title {
+  font-family: "Press Start 2P", serif;
+  font-size: 3rem;
+  color: #ff9ef0;
+  text-shadow: 0.08em 0.08em #111fe4;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 </style>
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".television__channel a");
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(".television__screen iframe").src = btn.href;
-      });
-    });
-  });
-</script>
