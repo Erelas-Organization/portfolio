@@ -64,8 +64,10 @@ import { Icon } from "astro-icon/components";
         </br>Hi, I'm Emma!</br></br>
         I recently graduated with a Bachelor's in Business Informatics
         and will be starting my Master's this April.</br></br>
-        A bit about my journey: Growing up, I loved watching my dad work on his computer. 
-        You could say I was very familiar with computers since I was little.</br></br>
+        Growing up, I loved watching my dad work on his computer. 
+        I'd sit beside him, fascinated by the screen, asking endless questions. 
+        Sometimes he'd let me click around making me feel part of it. 
+        Those moments sparked my curiosity and shaped my passion for technology.</br></br>
         Fast forward to today, and I’ve got a toolkit filled with experiences from 
         university projects, personal side hustles, and working student jobs.</br>
         These experiences have honed my skills in both tech and business, allowing 
@@ -128,20 +130,29 @@ import { Icon } from "astro-icon/components";
       background-color: #e2aee2;
       align-items: center;
       justify-content: center;
+      position: relative;
       clip-path: polygon(
-        30% 0%,
-        70% 0%,
-        100% 30%,
-        100% 70%,
-        70% 100%,
-        30% 100%,
-        0% 70%,
-        0% 30%
+        20% 0%,
+        80% 0%,
+        100% 20%,
+        100% 80%,
+        80% 100%,
+        20% 100%,
+        0% 80%,
+        0% 20%
       );
+      border: 2px solid;
+      border-top-color: #fff;
+      border-left-color: #fff;
+      border-bottom-color: #404040;
+      border-right-color: #404040;
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
     }
 
     .social-btn:hover {
       color: rgb(245, 229, 241);
+      transform: translateY(2px);
+      box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
     }
   </style>
 </section>
