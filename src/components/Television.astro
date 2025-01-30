@@ -13,20 +13,20 @@ const channels = [
     <div class="antenna-base"></div>
   </div>
   <div class="absolute top-[17.5%] inset-x-0 h-[73.2%] bg-[#955597] border-[3px] border-[#3b3733] rounded-[4.5%] p-[3%] box-border z-10 tv-center">
-    <div class="float-left w-full h-[92%] overflow-hidden screen">
+    <div class="float-left w-full h-[88%] sm:h-[90%] overflow-hidden screen">
       <div id="channel-display" class="w-full h-full">
         <img src={channels[0].src} alt="TV Channel" class="w-full h-full rounded-[4.5%]">
       </div>
     </div>
-    <div class="float-right channels-wrapper">
-      <ul class="channel-list flex">
-        <button class="channel-btn prev-channel bg-[#3b3733] w-12 h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg mt-1 mr-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="float-right channels-wrapper absolute bottom-1 sm:bottom-2 right-2 sm:right-4">
+      <ul class="channel-list flex gap-2 md:gap-3">
+        <button class="channel-btn prev-channel bg-[#3b3733] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button class="channel-btn next-channel bg-[#3b3733] w-12 h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button class="channel-btn next-channel bg-[#3b3733] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
           </svg>
         </button>
@@ -107,7 +107,6 @@ const channels = [
   float: left;
   width: 4.9%;
   height: 115%;
-  margin-top: -10%;
   background-color: #3b3733;
   border-radius: 48px;
   position: relative;
