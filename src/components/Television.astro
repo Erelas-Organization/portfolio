@@ -27,13 +27,13 @@ const channels = [
     </div>
     <div class="float-right channels-wrapper absolute bottom-1 sm:bottom-2 right-2 sm:right-4">
       <ul class="channel-list flex gap-2 md:gap-3">
-        <button class="channel-btn prev-channel bg-[#3b3733] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button class="channel-btn prev-channel bg-[#3b3733] w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button class="channel-btn next-channel bg-[#3b3733] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button class="channel-btn next-channel bg-[#3b3733] w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full hover:bg-[#dfb7e2] active:bg-[#955597] transition-colors flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#dfb7e2] touch-manipulation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
           </svg>
         </button>
@@ -48,11 +48,11 @@ const channels = [
 
 <script>
   const channels = [
-    { src: "/Bot.gif", type: "image" },
-    { src: "/Rezept.png", type: "image" },
-    { src: "/tookiorg.gif", type: "image" },
-    { src: "/heart.gif", type: "image" },
-    { src: "/portfolio.gif", type: "image" }
+    { src: document.querySelector('#channel-display img').src, type: "image" },
+    { src: new URL('../assets/Rezept.png', import.meta.url).href, type: "image" },
+    { src: new URL('../assets/tookiorg.gif', import.meta.url).href, type: "image" },
+    { src: new URL('../assets/heart.gif', import.meta.url).href, type: "image" },
+    { src: new URL('../assets/portfolio.gif', import.meta.url).href, type: "image" }
   ];
   
   let currentChannel = 0;
@@ -60,7 +60,7 @@ const channels = [
   
   function updateChannel() {
     const channel = channels[currentChannel];
-    channelDisplay.innerHTML = `<img src="${channel.src}" alt="TV Channel" class="w-full h-full object-contain bg-black">`;
+    channelDisplay.innerHTML = `<img src="${channel.src}" alt="TV Channel" class="w-full h-full rounded-[4.5%] object-contain bg-black">`;
   }
   
   document.querySelector('.prev-channel').addEventListener('click', () => {
