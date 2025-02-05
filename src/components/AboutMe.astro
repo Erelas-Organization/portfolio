@@ -1,17 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
+
+import profilePic from "../assets/profile-pic.jpg";
 ---
 
 <section class="min-h-screen snap-start">
-  <div class="title retro-font justify-self-center text-center text-5xl text-[#ff9ef0] pt-16">ABOUT ME</div>
+  <div class="title retro-font justify-self-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#ff9ef0] pt-16 text-center">ABOUT ME</div>
   <div class="win95-block w-[90%] max-w-[1200px] pb-4">
     <div class="win95-title flex items-center content-between min-h-6">
       <button class="win95-button ml-auto retro-font min-w-6 min-h-5 cursor-pointer inline-flex items-center content-center">x</button>
     </div>
     <div class="flex items-center justify-center flex-wrap gap-5 p-4 md:p-6">
-      <div class="polaroid-outer pt-5 mt-4 md:mt-0 mx-auto md:mx-0 pb-4 justify-self-center w-[100%] max-w-[350px]">
+      <div class="polaroid-outer p-5 mt-4 md:mt-0 mx-auto md:mx-0 pb-4 justify-self-center w-[100%] max-w-[350px]">
         <div class="polaroid-inner justify-self-center w-[90%] overflow-hidden">
-          <img src="/profile-pic.jpg" alt="Profile Picture" class="w-[100%] h-auto block" />
+          <img src={profilePic.src} alt="Profile Picture" class="w-[100%] h-auto block" />
         </div>
         <p class="justify-self-center retro-font mt-6 border-b-4 border-dashed border-black">
           Emmanuela Zhupa
@@ -24,8 +26,8 @@ import { Icon } from "astro-icon/components";
           >
             <Icon
               name="github"
-              size={50}
-              class="justify-self-center relative top-3"
+              size={30}
+              class="w-[60%] h-[60%]"
             />
           </a>
           <a
@@ -35,26 +37,19 @@ import { Icon } from "astro-icon/components";
           >
             <Icon
               name="linkedin"
-              size={45}
-              class="justify-self-center relative top-3"
+              size={30}
+              class="w-[60%] h-[60%]"
             />
           </a>
           <a
             href="mailto:em.zhupa@gmail.com"
-            class="social-btn mr-5"
+            class="social-btn"
             target="_blank"
           >
             <Icon
               name="mail"
-              size={50}
-              class="justify-self-center relative top-3"
-            />
-          </a>
-          <a href="tel:+4915788644558" class="social-btn" target="_blank">
-            <Icon
-              name="phone"
-              size={45}
-              class="justify-self-center relative top-3"
+              size={30}
+              class="w-[60%] h-[60%]"
             />
           </a>
         </div>
@@ -125,8 +120,10 @@ import { Icon } from "astro-icon/components";
     }
 
     .social-btn {
-      width: 70px;
-      height: 70px;
+      width: clamp(45px, 10vw, 70px);
+      height: clamp(45px, 10vw, 70px);
+      aspect-ratio: 1;
+      display: inline-flex;
       background-color: #e2aee2;
       align-items: center;
       justify-content: center;
