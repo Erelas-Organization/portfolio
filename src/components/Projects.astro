@@ -3,7 +3,7 @@ import Television from "./Television.astro";
 ---
 
 <section class="projects snap-start -z-10">
-  <div class="title retro-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#ff9ef0] pt-16 text-center">
+  <div class="title">
     PERSONAL PROJECTS
   </div>
   <Television />
@@ -14,6 +14,8 @@ import Television from "./Television.astro";
 
 .projects {
   min-height: 100vh;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
   background: #705670;
   padding: 4rem 0;
   display: flex;
@@ -23,6 +25,8 @@ import Television from "./Television.astro";
 
 .title {
   font-family: "Press Start 2P", serif;
+  font-size: 3rem;
+  color: #ff9ef0;
   text-shadow: 0.08em 0.08em #111fe4;
   margin-bottom: 2rem;
   text-align: center;
